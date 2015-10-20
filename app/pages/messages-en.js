@@ -3,12 +3,12 @@ var msgs = typeof msgs === "undefined" ? {} : msgs;
 msgs["en"] = {
 
 	header : {
-		"MENU_HOME" : "Home",
-		"MENU_ABOUT" : "About",
-		"MENU_SERVICES" : "Services",
-		"MENU_PRODUCTS" : "Products",
-		"MENU_CLIPAR" : "Clients&Partners",
-		"MENU_CONTACT" : "Contact",
+		"MENU_HOME" : "Início",
+		"MENU_ABOUT" : "Sobre",
+		"MENU_SERVICES" : "Serviços",
+		"MENU_PRODUCTS" : "Produtos",
+		"MENU_CLIPAR" : "Clientes&Parceiros",
+		"MENU_CONTACT" : "Contato",
 
 		"META_HOME" : "Somos experts em Business Analytics, BigData and Data Visualization e orgulhosos Pentaho Premium Partners." ,
 		"META_ABOUT" : "Conheça um pouco mais sobre nós. Somos experts em Business Analytics, BigData and Data Visualization e orgulhosos Pentaho Premium Partners.",
@@ -19,19 +19,19 @@ msgs["en"] = {
 	},
 
 	home : {
-		"JUMBO_END_TO_END" : "End-to-end Analytics",
-		"JUMBO_UNDERSTAND_DATA" : "Understand your data",
-		"JUMBO_REDUCE_LOSS" : "Reduce your Losses",
-		"JUMBO_MINIMIZE_COSTS" : "Minimize your costs",
-		"JUMBO_INCREASE_PROFIT" : "Increase your profit",
-		"JUMBO_SAVE_TIME" : "Save time",
-
-		"CAROUSEL_WEARE_PROUD" : "We're proud",
-		"CAROUSEL_PREMIUM_PARTNERS" : "Premium Partner",
-		"CAROUSEL_OUR_BUSINESS_IS" : "Our business is",
-		"CAROUSEL_INTELLIGENCE" : "Intelligence",
-		"CAROUSEL_WEARE" : "We're cloud",
-		"CAROUSEL_CLOUD_SPECIALISTS" : "Specialists",
+		"JUMBO_END_TO_END" : "Análise Ponto-a-Ponto",
+		"JUMBO_UNDERSTAND_DATA" : "Entenda seus dados",
+		"JUMBO_REDUCE_LOSS" : "Reduza suas perdas",
+		"JUMBO_MINIMIZE_COSTS" : "Minimize seus custos",
+		"JUMBO_INCREASE_PROFIT" : "Aumente seu lucro",
+		"JUMBO_SAVE_TIME" : "Economize tempo",
+		
+		"CAROUSEL_WEARE_PROUD" : "Nós somos orgulhosos",
+		"CAROUSEL_PREMIUM_PARTNERS" : "Premium Partners",
+		"CAROUSEL_OUR_BUSINESS_IS" : "Nosso Negócio é",
+		"CAROUSEL_INTELLIGENCE" : "Inteligência",
+		"CAROUSEL_WEARE" : "Somos especialistas",
+		"CAROUSEL_CLOUD_SPECIALISTS" : "em nuvem",
 
 		
 		tv : {
