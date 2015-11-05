@@ -14,10 +14,16 @@
         'oncasePages',
         'jumboBackgroundService', 
         'mouseOverClass',
-        'pageTransitionDirective'
+        'pageTransitionDirective',
+        'pascalprecht.translate'
       ]
     )
-    .config(function ($mdThemingProvider, $routeProvider, $locationProvider) {
+    .config(function ($mdThemingProvider, $routeProvider, $locationProvider, $translateProvider) {
+
+
+      $translateProvider.translations('en', msgs.en);
+      $translateProvider.translations('pt', msgs.pt);
+      $translateProvider.preferredLanguage('en');
 
       $mdThemingProvider.definePalette('oncasePalette', {
         '50': 'e5e9ef',
@@ -47,62 +53,73 @@
 
       $routeProvider
 
-        .when('/', {
-        templateUrl: 'app/pages/home/index.html',
-        controller: 'homeCtrl',
-        controllerAs: 'homeCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+      .when('/:lang/about', {
+            templateUrl: 'app/pages/about/index.html',
+            controller: 'aboutCtrl',
+            controllerAs: 'aboutCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
-      .when('/about', {
-        templateUrl: 'app/pages/about/index.html',
-        controller: 'aboutCtrl',
-        controllerAs: 'aboutCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+      .when('/:lang/services', {
+            templateUrl: 'app/pages/services/index.html',
+            controller: 'servicesCtrl',
+            controllerAs: 'servicesCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
-      .when('/services', {
-        templateUrl: 'app/pages/services/index.html',
-        controller: 'servicesCtrl',
-        controllerAs: 'servicesCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+      .when('/:lang/products', {
+            templateUrl: 'app/pages/products/index.html',
+            controller: 'productsCtrl',
+            controllerAs: 'productsCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
-      .when('/products', {
-        templateUrl: 'app/pages/products/index.html',
-        controller: 'productsCtrl',
-        controllerAs: 'productsCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+      .when('/:lang/clients-and-partners', {
+            templateUrl: 'app/pages/clipar/index.html',
+            controller: 'cliParCtrl',
+            controllerAs: 'cliParCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
-      .when('/clients-and-partners', {
-        templateUrl: 'app/pages/clipar/index.html',
-        controller: 'cliParCtrl',
-        controllerAs: 'cliParCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+      .when('/:lang/contact', {
+            templateUrl: 'app/pages/contact/index.html',
+            controller: 'ContactCtrl',
+            controllerAs: 'ContactCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
-      .when('/contact', {
-        templateUrl: 'app/pages/contact/index.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'ContactCtrl',
-        resolve: {
-          content:pageContentResolve
-        }
+
+      .when('/:lang', {
+            templateUrl: 'app/pages/home/index.html',
+            controller: 'homeCtrl',
+            controllerAs: 'homeCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
+      })
+
+
+      .when('/', {
+            templateUrl: 'app/pages/home/index.html',
+            controller: 'homeCtrl',
+            controllerAs: 'homeCtrl',
+            resolve: {
+              content:pageContentResolve
+            }
       })
 
       .otherwise({
-        redirectTo: '/'
+            redirectTo: '/'
       });
 
       $locationProvider.hashPrefix('!');

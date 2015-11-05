@@ -7,13 +7,18 @@
 
   <div class="oncase-logo"></div>
 
+  <div class="oncase-lang-sel-wrapper">
+    <i class="material-icons">language</i>
+    <a href="{{HeaderCtrl.getCurrentRoutForLang('pt')}}" class="oncase-lang-item no-outline oncase-lang-pt" target="_self" ng-class="{ active : HeaderCtrl.getCurrentLang()==='pt' }"></a>
+    <a href="{{HeaderCtrl.getCurrentRoutForLang('en')}}" class="oncase-lang-item no-outline oncase-lang-en" target="_self" ng-class="{ active : HeaderCtrl.getCurrentLang()==='en' }"></a>
+  </div>
   <md-tabs md-selected="selectedIndex" class="hidden-md hidden-sm hidden-xs oncase-header-ripple-tgt" md-scompotretch-tabs="never" md-center-tabs md-no-ink md-align-tabs="bottom" >
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Home" data-identifier="actualTab"></md-tab>
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Quem Somos"></md-tab>
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Serviços"></md-tab>
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Produtos"></md-tab>
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Clientes&Parceiros"></md-tab>
-      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="Contato"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_HOME' | translate }}" data-identifier="actualTab"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_ABOUT' | translate }}"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_SERVICES' | translate }}"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_PRODUCTS' | translate }}"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_CLIPAR' | translate }}"></md-tab>
+      <md-tab md-on-select="HeaderCtrl.tabClicked(selectedIndex)" label="{{ 'header.MENU_CONTACT' | translate }}"></md-tab>
   </md-tabs>
       <div class="hidden-lg oncase-menu-button">
         <md-button class="pull-right tapa-menu tapa-icon md-icon-button md-primary" ng-click="showMenu('right')" aria-label="Settings">

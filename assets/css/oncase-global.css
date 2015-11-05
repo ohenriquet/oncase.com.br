@@ -57,6 +57,59 @@ a.white-link:active{
     font-weight: 100;
     font-size: 72px;
 }
+header.oncase-small-header .oncase-lang-sel-wrapper{
+    display:none;
+}
+
+header .oncase-lang-sel-wrapper{
+    position: absolute;
+    right: 60px;
+    margin-top: 10px;
+    z-index:1;
+
+}
+
+a.oncase-lang-en::after{
+    content:"English";
+}
+a.oncase-lang-pt::after{
+    content:"Português";
+}
+
+header .oncase-lang-sel-wrapper i.material-icons {
+
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: -20px;
+
+}
+header a.oncase-lang-item{color: #6C86AD;margin-left:10px;}
+header a.oncase-lang-item.active{color:#fff;}
+
+a.oncase-lang-item{
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration:none;
+}
+a.oncase-lang-item.active{
+    font-weight:bold;
+}
+
+
+
+oncase-footer .oncase-lang-sel-wrapper a.oncase-lang-item{
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration:none;
+}
+oncase-footer .oncase-lang-sel-wrapper a.oncase-lang-item.active{
+    color:#fff;
+    font-weight:bold;
+}
+
+
+
 
 /* ==============================================
 	Header
@@ -788,6 +841,17 @@ img.oncase-desaturated-img{
    ============================================== */
 @media(max-width:1199px){
 
+    header.oncase-small-header .oncase-lang-sel-wrapper{
+        display:inline;
+    }
+
+    header .oncase-lang-sel-wrapper{
+        margin-top: 23px;
+        margin-right: 40px;
+    }
+
+
+
     img.oncase-desaturated-img{
         width:180px;
     }
@@ -844,6 +908,15 @@ img.oncase-desaturated-img{
 @media(max-width:767px){
     .oncase-content-margin {
         margin: 0px 10px;
+    }
+
+    
+
+    a.oncase-lang-en::after{
+        content:"EN";
+    }
+    a.oncase-lang-pt::after{
+        content:"PT";
     }
 }
 
